@@ -1,0 +1,2333 @@
+c++
+
+Intro:-
+#include<iostream>
+using namespace std;
+int main()
+{
+    cout<<"Hello World";
+    return 0;
+}
+
+----------------
+#include<iostream>
+using namespace std;
+int main()
+{
+    int sum=6;
+    cout<<sum;
+    return 0;
+}
+
+--------------
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a = 6;
+    int b = 7;
+    float pi = 3.14;
+    char s= 'shubh';
+    cout<<"Value of a is : "<<a<<"\nValue of b is : "<<b;
+    cout<<"\nValue of pi is : "<<pi;
+    cout<<"\n Value of s is : "<<s;
+    return 0;
+}
+
+---------------
+
+#include<iostream>
+using namespace std;
+int glo=6; //global variable 
+
+void sum()   //function 
+{
+    int a;  //a will be declasred as variable
+    cout<<glo; //output will be variable glo i.e.6
+}
+
+int main()
+{
+    int glo=7;  //local variable--takes presidence over global
+    glo=8;      //updated varaible value
+    sum(); // execution  will stop for sometime and go to the function in this case sum.
+cout<<glo; //() represents that it is function.
+    return 0;
+}
+
+--------
+
+#BAsic input and output
+
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int num1, num2;
+    cout<<"Enter thevalue of num1 : \n"; //"<<"insertion operator
+    cin>>num1;// ">>"extraction operator
+
+    cout<<"Enter the value of num2 : \n";
+    cin>>num2;
+
+    cout<<"The sum is : "<<num1+num2;
+
+    return 0;
+}
+
+
+
+--------
+
+#Header files:-
+
+operators:
+
+Arthematic operators:
+#include<iostream>  //header file 
+using namespace std; //
+
+int main()
+{
+    int a=3,b=4;
+    cout<<"Shubh"<<endl;
+
+    cout<<"The value of a + b is "<<a+b<<endl;
+    cout<<"The value of a - b is "<<a-b<<endl;
+    cout<<"The value of a * b is "<<a*b<<endl;
+    cout<<"The value of a / b is "<<a/b<<endl;
+    cout<<"The value of a % b is "<<a%b<<endl; //modulus--returns the division remainder
+    cout<<"The value of a++ is "<<a++<<endl; //increase the value by 1
+    cout<<"The value of a-- is "<<a--<<endl; //decrease the value by 1
+    cout<<"The value of ++a is "<<++a<<endl;
+    cout<<"The value of --a is "<<--a<<endl;    
+    
+    return 0;
+}
+
+
+Assignment operator:
+= used tom assign value 
+
+Comparison operators:
+
+#include<iostream>   
+using namespace std;
+
+int main()
+{    
+    int a=4,b=5;
+    //comparision operators
+    cout<<"The value of a==b is"<<(a==b)<<endl;
+    cout<<"The value of a!=b is"<<(a!=b)<<endl;
+    cout<<"The value of a>=b is"<<(a>=b)<<endl;
+    cout<<"The value of a<=b is"<<(a<=b)<<endl;
+    cout<<"The value of a>b is"<<(a>b)<<endl;
+    cout<<"The value of a<b is"<<(a<b)<<endl;
+    return 0;
+}
+
+Logical operators:
+
+#include<iostream>   
+using namespace std;
+
+int main()
+{    
+    int a=4,b=5;
+    //Logical operators
+    cout<<"The value of ((a==b)&&(a<b)) is "<<((a==b)&&(a<b))<<endl; //"&&"logical "and" operator
+    cout<<"The value of ((a==b)||(a<b)) is "<<((a==b)||(a<b))<<endl; //"||"logical "or" operator
+    cout<<"The value of (!(a==b)) is "<<(!(a==b))<<endl; //"!"logical "not" operator
+
+    return 0;
+}
+
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int a , b, c ;
+    cout<<"Enter value of a : "<<endl;
+    cin>>a;
+    cout<<"Enter value of b : "<<endl;
+    cin>>b;
+    c = a + b;
+    cout<<"The sum is "<<c;
+    return 0;
+}
+
+
+
+#include<iostream>
+using namespace std;
+
+int c=4;
+int main()
+{
+  int a,b,c;
+  cout<<"enter value of a"<<endl;
+  cin>>a;
+
+  cout<<"enetr value of b"<<endl;
+  cin>>b;
+
+  c=a+b;
+  cout<<"sum is:"<<c<<endl;
+  cout<<"global c is:"<<::c; //"::"scope resolution operator
+
+  return 0;
+}
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+  float d=4.4;
+  long double e= 4.4; //by default decimal oint is double
+
+  //so we need to add f i.e 4.4f then it will show as float when called by function
+
+  cout<<"The value of d is"<<d<<endl<<"the value of e is"<<e;
+
+  return 0;
+}
+
+
+
+---------------
+#include<iostream>
+using namespace std;
+
+int main()
+{
+  //reference variables
+  float a = 466;
+  float & b= a; //b points to a and have same value or content
+  cout<<a<<endl;
+  cout<<b;
+
+
+  return 0;
+}
+
+
+------------
+#include<iostream>
+using namespace std;
+
+int main()
+{
+  //typecasting
+  //changing one variable to another e.g int to float
+    int a = 34;
+
+    float b = 56.7;
+    cout<<"The value of a is "<<(float)a<<endl;
+    cout<<"The value of b is "<<(int)b<<endl;
+    int c = int(b);
+
+    cout<<"The expression is "<<a+b<<endl;
+    cout<<"The expression is"<<a+ int(b)<<endl;
+    cout<<"the expression is "<<a+(int)b<<endl;
+
+
+  return 0;
+}
+
+
+
+--------------
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+  int a=23;
+  char c = 'c';
+  cout<<"The value of a was:"<<a<<endl;
+  cout<<"The value of c was : "<<c<<endl;
+  a=25;
+  c = '5';
+  cout<<"the value of a is: "<<a<<endl;
+  cout<<"The value of c is: "<<c<<endl;
+
+
+  return 0;
+}
+
+
+-----------
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+  const int a=23;
+  //value of a cannot be changed if declared as const
+  cout<<"the value of a is: "<<a<<endl;
+  return 0;
+}
+
+#################
+Manipulators:
+
+#include<iostream>
+#include<iomanip>
+using namespace std;
+
+int main()//manipulators like endl
+{
+  int a=4,b=5,c=6;
+  cout<<"THE value of a is: "<<a<<endl;
+  cout<<"THE value of b is: "<<b<<endl;
+  cout<<"THE value of c is: "<<c<<endl;
+
+  cout<<"THE value of a is: "<<setw(5)<<a<<endl; //setw is used to set widthh /space taken by fn. 
+  cout<<"THE value of b is: "<<setw(5)<<b<<endl;
+  cout<<"THE value of c is: "<<setw(5)<<c<<endl;
+  
+
+  return 0;
+}
+
+----------
+#include<iostream>
+#include<iomanip>
+using namespace std;
+
+int main()//operator precedence
+{
+  int a=2,b=5;
+  int c = a*5/b;
+  cout<<c;
+
+  return 0;
+}
+
+-----------
+#include<iostream>
+using namespace std;
+
+int main()//selection control structure if else if else ladder
+{
+  int age;
+  cout<<"Tell age";
+  cin>>age;
+  if((age<18)&&(age>0)){
+    cout<<"Underage"<<endl;
+  }
+  else if(age==18)
+  {
+    cout<<"You are 18"<<endl;
+  }
+  else if(age<1)
+  {
+    cout<<"you are 0"<<endl;
+  }
+  else{
+    cout<<"overage"<<endl;
+  }
+
+  return 0;
+}
+
+
+===================
+#include<iostream>
+using namespace std;
+
+int main()
+{
+  int age;
+  cout<<"age: "<<endl;
+  cin>>age;
+
+  switch (age)
+  {
+  case 18:
+  cout<<"Your are 18";
+    break; //stops the further execution and escapes 
+    // or al cases will be print
+     case 20:
+  cout<<"Your are 20";
+    break;
+     case 30:
+  cout<<"Your are 30";
+    break;
+  default:
+  cout<<"no case";
+    break;
+  }
+  
+  return 0;
+}
+
+
+
+
+
+--------
+for loop
+
+#include<iostream>
+#include<iomanip>
+using namespace std;
+
+int main()//loops 
+//for(initilization; condition; updation)
+{
+  for(int i=0;i<=10;i++)
+  {
+    cout<<i<<endl;
+  }
+
+ 
+  
+  return 0;
+}
+
+
+-----------
+while loop
+#include<iostream>
+#include<iomanip>
+using namespace std;
+
+int main()//loops 
+//while(condition)
+{
+  int i=3;
+  while(i<=40){
+    cout<<i<<endl;
+    i++;
+  }
+ 
+  return 0; 
+}
+
+
+------------
+#include<iostream>
+using namespace std;
+//WAP to write table of num till upto 10
+int main()//loops 
+//dowhile
+{
+  int n,count=0;
+  cout<<"enter value";
+  cin>>n;
+  do
+  {
+    cout<<n<<"*"<<count<<"="<<n*count<<endl;
+    count++;
+
+  }  
+  while(count<=10);
+ 
+  return 0; 
+}
+
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+  int n, x=0,l;
+  cout<<"Enter n: ";
+  cin>>n;
+  cout<<"enter l : ";
+  cin>>l;
+
+  do{
+    cout<<n<<"*"<<x<<"="<<n<<endl;
+    x++;
+  }
+  while(x<=l);
+
+  return 0;
+}
+
+
+
+
+
+=============================
+#include<iostream>
+using namespace std;
+int main()
+{
+  for(int i=0;i<=4;i++)
+  {
+    if(i==3)
+    {
+      continue;
+    }
+    cout<<i<<endl;
+  }
+  return 0;
+}
+
+
+
+
+---------
+POINTERS
+
+#include<iostream>
+using namespace std;
+int main()
+{
+  //pointer ------->datatype which holds adress of other datatypes
+  int a=3;
+  int* b = &a; //b is a pointer which stores adress of a (&a represents adress of a)
+
+  //& --->Adress of operator
+  //* -->dereference of operator
+  cout<<"The adress of a is: "<<&a<<endl;
+  cout<<"The adress os a is: "<<b<<endl;
+
+  return 0;
+}
+
+
+#include<iostream>
+using namespace std;
+int main()
+{
+  //pointer ------->datatype which holds adress of other datatypes
+  int a=3;
+  int* b = &a; //b is a pointer which stores adress of a (&a represents adress of a)
+
+  //& --->(Adress of) operator
+  cout<<"The adress of a is: "<<&a<<endl;
+  cout<<"The adress os a is: "<<b<<endl;
+  //* -->(valoe at)operator-->dereference of operator
+  cout<<"The value of adress b : "<<*b<<endl; //* before penpointer variable displays value of variable
+
+  return 0;
+}
+
+-------------------
+#include<iostream>
+using namespace std;
+int main()
+{
+  int a = 3;
+  int*b;
+  b= &a;
+
+  int ** c=&b; //pointer to pointer 
+  cout<<"The adress of  b is "<<&b<<endl;
+  cout<<"The address of  b is "<<c<<endl;
+    cout<<"The valueog b is "<<&b<<endl;
+    cout<<"The value at adress c is "<<*c<<endl;
+    cout<<"The value at adress value _at(value_at c) is "<<**c<<endl;
+
+
+  return 0;
+}
+
+
+
+######################
+ARRAYS
+
+#include<iostream>
+using namespace std;
+int main()
+{
+  int marks[3] = {23,234,234};
+  int mthmarks[4];
+  mthmarks[0] = 345;
+  mthmarks[1] = 67;
+  mthmarks[2] = 45;
+  mthmarks[3] = 56;
+  cout<<"These are mth marks : "<<endl;
+
+  cout<<mthmarks[0]<<endl;
+  cout<<mthmarks[1]<<endl;
+  cout<<mthmarks[2]<<endl;
+  cout<<mthmarks[3]<<endl;
+
+
+  cout<<marks[0]<<endl;
+  cout<<marks[1]<<endl;
+  cout<<marks[2]<<endl;
+  
+  return 0;
+}
+
+values of an array can be changeed.
+
+#include<iostream>
+using namespace std;
+int main()
+{
+  int marks[3] = {23,234,234};
+  int mthmarks[4];
+  mthmarks[0] = 345;
+  mthmarks[1] = 67;
+  mthmarks[2] = 45;
+  mthmarks[3] = 56;
+  cout<<"These are mth marks : "<<endl;
+
+  cout<<mthmarks[0]<<endl;
+  cout<<mthmarks[1]<<endl;
+  cout<<mthmarks[2]<<endl;
+  cout<<mthmarks[3]<<endl;
+
+
+  cout<<marks[0]<<endl;
+  cout<<marks[1]<<endl;
+  cout<<marks[2]<<endl;
+
+//printing array iuisng loop
+  for(int i = 0;i<4;i++)
+  {
+    cout<<"The value of marks"<<i<<"is"<<marks[i]<<endl;
+  }
+  
+  return 0;
+}
+
+################
+__________________
+++++++++++++++++
+
+
+#include<iostream>
+using namespace std;
+int main()
+{
+  int i=0;
+  int marks[4] = {12,13,1323,123};
+  while(i<=3)
+  {
+    cout<<"The value of marks is : "<<i<<"is"<<marks[i]<<endl;
+    i++;
+  }
+
+  return 0;
+}
+
+===============
+print value of array using do while loop.
+
+#include<iostream>
+using namespace std;
+int main()
+{
+  int i=0;
+  int marks[4] = {12,13,1323,123};
+  do{
+    cout<<"The value of marks is: "<<i<<" is "<<marks[i]<<endl;
+    i++;
+  }
+  while(i<=3);
+
+  return 0;
+}
+
+----------------
+##########################
+__________________________________
+---------------------------------------------------
++===============================
+
+Pointer Arthematic
+
+
+=======================================================
+###################################################
+
+
+structure:-
+
+
+#include<iostream>
+using namespace std;
+
+struct employee  //structurem--used when different datatypes are given
+
+{
+  int eId;
+  char favChar;
+  float salary;
+};
+
+int main()
+{
+  struct employee shubh;
+  shubh.eId = 1;
+  shubh.favChar = 's';
+  shubh.salary = 100;
+
+  cout<<"The eID is "<<shubh.eId<<endl;
+  cout<<"The FavChar is "<<shubh.favChar<<endl;
+  cout<<"The salary is "<<shubh.salary<<endl;
+
+  return 0;
+
+}
+
+
+
+############
+#include<iostream>
+using namespace std;
+
+typedef struct employee  //structurem--used when different datatypes are given
+
+{
+  int eId;
+  char favChar;
+  float salary;
+}ep; //struct employee(datatype) defined as ep
+
+int main()
+{
+  ep shubh;  //ep can be used as datatype such as int float
+  shubh.eId = 1;
+  shubh.favChar = 's';
+  shubh.salary = 100;
+
+  cout<<"The eID is "<<shubh.eId<<endl;
+  cout<<"The FavChar is "<<shubh.favChar<<endl;
+  cout<<"The salary is "<<shubh.salary<<endl;
+
+  return 0;
+
+}
+
+
+
+#####################
+Unions:-
+
+same as structure but provide better management.
+
+
+#include<iostream>
+using namespace std;
+
+typedef struct employee  //structurem--used when different datatypes are given
+//can use all at same time
+{
+  int eId;//4
+  char favChar;//1
+  float salary;//4    //total memory used will be 9 bytes
+}ep; //struct employee(datatype) defined as ep
+
+union money //only one datatype will be used at a time
+//for better mmemory management
+{
+  int rice;//4
+  char car;//memory will be shared by all datatypes
+  float pounds; //only 4 bytes memory will be used by all 
+};
+
+int main(){
+   ep shubh;  //ep can be used as datatype such as int float
+  shubh.eId = 1;
+  shubh.favChar = 's';
+  shubh.salary = 100;
+
+  cout<<"The eID is "<<shubh.eId<<endl;
+  cout<<"The FavChar is "<<shubh.favChar<<endl;
+  cout<<"The salary is "<<shubh.salary<<endl;
+
+  union money m1;
+  m1.rice = 10;
+  // m1.car = 'm';  //only one can be used at a time or it wil be overwritten and garbage value will be shown
+  // m1.pounds = 300;
+
+  cout<<"rice is "<<m1.rice<<endl;  
+  // cout<<"car  is "<<m1.car<<endl;  //only one can be used at a time
+  // cout<<"pounds are "<<m1.pounds<<endl;
+
+  return 0;
+
+
+
+
+
+}
+
+
+
+
+##########
+enum
+
+#include<iostream>
+using namespace std;
+int main() //enum
+{
+  enum meal{breakfast, lunch , dinner}; //meal has become a datatype
+  cout<<breakfast; //interger number will be given to then 
+  cout<<lunch;//starting fom zero
+  cout<<dinner;
+
+  return 0;
+}
+
+//output 012
+
+
+
+#include<iostream>
+using namespace std;
+int main() //enum
+{
+  enum meal{breakfast, lunch , dinner}; //meal has become a datatype
+
+  meal m1 = breakfast;
+  cout<<m1;  //output as 0
+
+  // meal m1 = lunch;
+  // cout<<m1;  //output as 1
+
+  // meal m1 = dinner;
+  // cout<<m1; //output as 2 
+
+
+
+  // cout<<breakfast; //interger number will be given to then 
+  // cout<<lunch;//starting fom zero
+  // cout<<dinner;
+
+  return 0;
+}
+
+
+
+#include<iostream>
+using namespace std;
+int main() //enum
+{
+  enum meal{breakfast, lunch , dinner}; //meal has become a datatype
+
+// meal m1 = breakfast;
+//   cout<<(m1==1);
+  //m1 is not equal to 1 so outpugt is 0
+  
+meal m1 = breakfast;
+  cout<<(m1==0);
+  //m1 is equal to 0 so output is 1
+
+  return 0;
+}
+
+
+###############
+
+
+
+=================================
+
+
+
+====================================
+
+
+function
+
+//functions
+
+#include<iostream>
+using namespace std;
+
+int sum(int a , int b)
+{
+  int c = a+b;//3+4
+
+  return c;//value of c wil be 7
+}
+
+int main() //mian is a function --make once use many times
+{
+  int num1 , num2;
+  cout<<"Enter first number"<<endl;
+  cin>>num1;//3
+   
+  cout<<"Enter second number"<<endl;
+  cin>>num2;//4
+
+  cout<<"The sum is "<<sum(num1 , num2);//the value of c will be returned here
+
+
+  //program wil find fn sum
+  //num1 and num2 and will give the values to a and  b 
+
+  //the value of c will be retuned to the fn{ sum(num1,num2) } (called retuen value fn key)
+
+  return 0;
+}
+
+
+#####
+function prototyping :-
+
+sometimes fn are declared after main so we do fn prototyping 
+the compiler will be ready for the fn to be declared
+
+
+//functions
+
+#include<iostream>
+using namespace std;
+
+//function prototype
+//type function-name (arguments);
+
+int sum(int a, int b);//fn prototyping
+
+int main()
+{
+  int num1 , num2;
+  cout<<"Enter first number"<<endl;
+  cin>>num1;
+   
+  cout<<"Enter second number"<<endl;
+  cin>>num2;
+
+  cout<<"The sum is "<<sum(num1 , num2);
+
+  return 0;
+}
+
+int sum(int a , int b) //fn sum is declared after fn main
+{
+  int c = a+b;
+
+  return c;
+}
+
+//functions
+
+#include<iostream>
+using namespace std;
+
+//function prototype
+//type function-name (arguments);
+
+int sum(int a, int b);//fn prototyping  //acceptable
+// int sum(int a,b); //not acceptable nned to be declared saperately
+// int sum(int, int); //acceptable //onlly type need to be declared
+
+
+int main()
+{
+  int num1 , num2;
+  cout<<"Enter first number"<<endl;
+  cin>>num1;
+   
+  cout<<"Enter second number"<<endl;
+  cin>>num2;
+
+  cout<<"The sum is "<<sum(num1 , num2); 
+  //num1 and num2 are actual parameters
+
+  return 0;
+}
+
+int sum(int a , int b)
+//formal parameters a and will be taking values from actual parameters num1 and num2
+//formal and actual parameters can be same
+
+{
+  int c = a+b;
+
+  return c;
+}
+
+void g()
+{
+  cout<<"good morning ";
+}
+
+
+
+#########
+void
+return need not to be declared // use void
+
+
+//functions
+
+#include<iostream>
+using namespace std;
+
+int sum(int a, int b);
+void g(void);//fn g is defined as void no value iois given ior taken
+//or void g(); //writing void in smal brackets is optional
+int main()
+{
+  int num1 , num2;
+  cout<<"Enter first number"<<endl;
+  cin>>num1;
+   
+  cout<<"Enter second number"<<endl;
+  cin>>num2;
+
+  cout<<"The sum is "<<sum(num1 , num2); 
+  
+  g();//g is called in  main
+  //error will be given g not found in scope
+  //so we need to defien void
+
+  return 0;
+}
+
+int sum(int a , int b)
+{
+  int c = a+b;
+
+  return c;
+}
+
+void g()
+{
+  cout<<"\ngood morning ";
+}
+
+
+####################
+call by name call by reference
+
+//call by value call by reference
+
+#include<iostream>
+using namespace std;
+
+int sum(int a, int b)
+{
+  int c = a+b;
+  return c;
+}
+
+
+int main()
+{
+  cout<<"The sum of of 4 and 5 is "<<sum(4,5);
+  //4 will be given to a and 5 will be given to b
+  
+  return 0;
+}
+
+
+###################3
+swap 
+call by reference
+
+//call by value call by reference
+
+#include<iostream>
+using namespace std;
+
+
+// void swap(int a,int b)
+// {
+//   int temp = a; //value of temp >>>4 //a>>>4 //b>>>5
+//   a = b; //temp>>4//a>>>5//b>>5
+//   b = temp;//temp>>>4//a>>5//b>>4
+// }// // this is called call by reference using pointers
+
+
+
+// // values of variables a and b  copies of x and y are swapped not their adress //not their original value
+// //this will not swap 
+
+void swapPointer(int* a,int* b) //* takes adress of a and b
+{
+  int temp = *a; //the adress is derefrenced to temp.///temp>>> value at adress
+  //now temp contains value of adress a i.e.*a
+  *a = *b; //value at address a >>>value at address b
+  *b = temp; //value at adress b  >>>temp
+}//call by reference using pointers
+
+int main()
+{
+  int x = 4 , y = 5;
+
+  cout<<"The value of x is "<<x<<" and the value of y is"<<y<<endl;
+  // swap(x,y);//x and y are copied to a and b
+  // //the values of a and b will no taffect x and y.
+  // //so values of x and y will not be cahnged
+
+
+  swapPointer(&x,&y);//a and b takes address of x and y
+
+  cout<<"The value of x is "<<x<<" and the value of y is"<<y<<endl;
+  
+  return 0;
+}
+
+
+
+########
+
+
+//call by value call by reference
+
+#include<iostream>
+using namespace std;
+
+//swap using reference variables
+//actual value of x and y (&a ,&b)
+
+void swapReferenceVar(int &a,int &b) 
+{
+  int temp = a;
+  a = b;
+  b = temp;
+}
+
+int main()
+{
+  int x = 4 , y = 5;
+
+  cout<<"The value of x is "<<x<<" and the value of y is"<<y<<endl;
+ 
+
+  swapReferenceVar(x,y);
+  cout<<"The value of x is "<<x<<" and the value of y is"<<y<<endl;
+  
+  return 0;
+}
+
+
+
+
+
+//call by value call by reference
+
+#include<iostream>
+using namespace std;
+
+//swap using reference variables
+//actual value of x and y (&a ,&b)
+
+void swapReferenceVar(int &a,int &b) 
+{
+  int temp = a;
+  a = b;
+  b = temp;
+}
+
+int main()
+{
+  int x = 4 , y = 5;
+
+  cout<<"The value of x is "<<x<<" and the value of y is"<<y<<endl;
+ 
+
+  swapReferenceVar(x,y);
+  cout<<"The value of x is "<<x<<" and the value of y is"<<y<<endl;
+  
+  return 0;
+}
+
+
+
+
+//call by value call by reference
+
+#include<iostream>
+using namespace std;
+
+//swap using reference variables
+//actual value of x and y (&a ,&b)
+
+int & swapReferenceVar(int &a,int &b) 
+{
+  int temp = a;
+  a = b;
+  b = temp;
+
+  return a; //return by reference variable
+}
+
+int main()
+{
+  int x = 4 , y = 5;
+
+  cout<<"The value of x is "<<x<<" and the value of y is"<<y<<endl;
+
+ 
+
+  swapReferenceVar(x,y) = 766; //x value will be 766
+
+  cout<<"The value of x is "<<x<<" and the value of y is"<<y<<endl;
+  
+  return 0;
+}
+
+
+
+##################
+//inline function
+
+#include<iostream>
+using namespace std;
+
+inline int product(int a ,int b) //inline fn ---the return value will be saved at during compilation to reduce time of execution
+//if a large code is used in inline it will take a large cache memory
+
+{
+  return a*b;
+}
+
+int main()
+{
+  int a ,b ;
+  cout<<"Enter values: ";
+
+  cin >>a>>b;
+  cout<<"The product is "<<product(a,b);
+  return 0;
+}
+
+
+
+
+#########
+
+
+//inline function
+
+#include<iostream>
+using namespace std;
+
+//inline should not be used when  recurrsion abnd static variables are used
+
+inline int product(int a ,int b) 
+
+{
+  static int c = 0; //the value will be retained and not changed
+  c = c+1; //the value will be 1 and retained 
+  return a*b+c;
+}
+
+int main()
+{
+  int a ,b ;
+  cout<<"Enter values: ";
+
+  cin >>a>>b;
+  cout<<"The product is "<<product(a,b);
+  return 0;
+}
+
+
+
+
+################
+deafult arguments
+
+//default argument
+#include<iostream>
+using namespace std;
+
+
+float moneyReceived(int currentMoney , float factor=1.04) //1.04 = 4%  //default arrguments should be written at end
+{
+  return currentMoney * factor;
+}
+
+int main()
+{
+  int money = 10000;
+  cout<<"If you have  "<<money<<"Rs in your bank account , you will receive "<<moneyReceived(money)<<"Rs after 1 year"<<endl; //deafault 1.04 will be taken 
+  cout<<"For VIP: If you have  "<<money<<"Rs in your bank account , you will receive "<<moneyReceived(money,1.10)<<"Rs after 1 year";
+
+
+  return 0;
+}
+
+
+
+
+//constant argument --fn will not be able to change value
+#include<iostream>
+using namespace std;
+
+
+float moneyReceived(int currentMoney , float factor=1.04) //1.04 = 4% 
+{
+  return currentMoney * factor;
+}
+
+//int strlen(const char *p) //value of p will not be changed
+{
+  
+}
+
+int main()
+{
+  int money = 10000;
+  cout<<"If you have  "<<money<<"Rs in your bank account , you will receive "<<moneyReceived(money)<<"Rs after 1 year"; //deafault 1.04 will be taken 
+  cout<<"For VIP: If you have  "<<money<<"Rs in your bank account , you will receive "<<moneyReceived(money,1.10)<<"Rs after 1 year";
+
+
+  return 0;
+}
+
+
+
+##########################
+//recursion 
+#include<iostream>
+using namespace std;
+
+int factorial(int n) //factorial
+{
+  if(n<=1)
+  {
+    return 1;
+  }
+  return n*factorial(n-1);
+}
+
+int main()
+{
+  int a;
+  cout<<"Enter a number "<<endl;
+  cin>>a;
+  cout<<"The factorial of : "<<a<<" is "<<factorial(a)<<endl;
+
+  
+  return 0;
+}
+
+#include<iostream>
+using namespace std;
+//fibonacci sequence
+int fib(int n)
+{
+  if(n<2)//base value
+  {
+    return 1;
+  }
+  return fib(n-2)+fib(n-1); //recurssion function
+}
+int main()
+{
+  int a ;
+  cout<<"Enter position ";
+  cin>>a;
+  cout<<"Tehe term in fibonacchi sequence  at position "<<a<<" is "<<fib(a)<<endl;
+  return 0;
+}
+
+
+###################################
+#######################################
+#############################################
+FUNCTION OVERLOADING
+
+//function overloading
+#include<iostream>
+using namespace std;
+//clculate volume of a cylinder
+int volume(double r, int h)
+{
+  return(3.14*r*r*h);
+}
+
+//calculate volume of cube
+int volume(int a)
+{
+  return a*a*a;
+}
+
+//rectangle box
+int volume(int l, int b,int h)
+{
+  return l*b*h;
+}
+int main()
+{
+  cout<<"The volume of cylinder is "<<volume(12,13)<<endl;
+  cout<<"The volume of cube is "<<volume(12,4)<<endl;
+  cout<<"The volume of rectangle box is "<<volume(2,3,4)<<endl;
+  
+
+  return 0;
+}
+
+#######################################
+#########################################
+##################################
+OBJECT ORIENTED PROGRAMMING
+
+
+//classes
+
+#include<iostream>
+using namespace std;
+
+class employee
+{
+  private:
+  int a , b, c;
+
+  public:
+  int d, e;
+  void setData(int a1,int b1,int c1);//Declaration
+  void getData()
+  {
+    cout<<"The value of a is"<<a<<endl;
+    cout<<"The value of b is"<<b<<endl;
+    cout<<"The value of c is"<<c<<endl;
+    cout<<"The value of d is"<<d<<endl;
+    cout<<"The value of e is"<<e<<endl;
+  }
+
+};
+
+
+
+
+void employee :: setData(int a1, int b1, int c1)
+{
+  a = a1;
+  b = b1;
+  c = c1;
+}
+
+int main()
+{
+  employee shubh;
+  //shubh.a = 3;//this will throw error because a is pro=ivate and cannot be accessed outside class
+
+  shubh.d = 23;
+  shubh.e = 34;
+  shubh.setData(1,2,5); //datra is called
+  shubh.getData(); //prints values from cout
+  
+  return 0;
+}
+
+###############################
+###############################
+
+OOPs classes and objects
+
+
+
+//class---> it is extension for structures (in c)
+//structure had limitations >>>>>>members are public and methods cannot be added
+//classes  = structures 
+//classes acan have methods and propr=erties 
+//classes can make few members as private and public 
+//
+
+structures in c1++ are typedef
+you can delcare objects along with class Declaration
+like __________________
+
+class names{
+  //class defination
+}shubh, amit;
+
+shubh.salary =100 is not valid if class salary is private
+
+
+#################################
+nesting of member function
+
+
+
+// nesting of member function
+#include <iostream>
+#include <string>
+using namespace std;
+
+class binary
+{
+  string s;
+
+public:
+  void read(void);
+  void chk_bin(void);
+  void ones_complement(void);
+  void display(void);
+};
+
+void binary ::read(void)
+{
+  cout << "Enter a binary number " << endl;
+  cin >> s;
+}
+
+void binary ::chk_bin(void)
+{
+  for (int i = 0; i < s.length(); i++)
+  {
+    if (s.at(i) != '0' && s.at(i) != '1')
+    {
+      cout << "incorrect binary format" << endl;
+      exit(0);
+    }
+  }
+}
+
+void binary ::ones_complement(void)
+{
+  for (int i = 0; i < s.length(); i++)
+  {
+    if (s.at(i) == '0')
+    {
+      s.at(i) = '1';
+    }
+    else
+    {
+      s.at(i) = '0';
+    }
+  }
+}
+
+void binary ::display(void)
+{
+  cout << "\nDisplaying the complement of binary number" << endl;
+  for (int i = 0; i < s.length(); i++)
+  {
+    cout << s.at(i);
+  }
+}
+
+int main()
+{
+  binary b;
+  b.read();
+  b.chk_bin();
+  b.display();
+  b.ones_complement();
+  b.display();
+
+  return 0;
+}
+
+
+
+// nesting of member function
+#include <iostream>
+#include <string>
+using namespace std;
+
+class binary //amde a class whose name is binary
+{
+  private:   //by default members are always private
+  string s; //gave a string where we will input the binary number
+//made 4 functions
+//void chk_bin(void); if defined in private no one will be able to access this fn from outside i.e.main
+public:
+  void read(void);//fn raeds data
+  void chk_bin(void);//check if the number is binary
+  void ones_complement(void);//complement  the binary number
+  void display(void);//display the binary number
+};
+
+void binary ::read(void) //implemenmted the fn
+{
+  cout << "Enter a binary number " << endl;
+  cin >> s;
+}
+
+void binary ::chk_bin(void) //implemented the fn
+{
+  //chk_bin(); //can be run before the main //we dont need the string the string used in the fn will be used and the fn will be hidden from the implementation details
+  for (int i = 0; i < s.length(); i++)
+  {
+    if (s.at(i) != '0' && s.at(i) != '1')
+    {
+      cout << "incorrect binary format" << endl;
+      exit(0);
+    }
+  }
+}
+
+void binary ::ones_complement(void) //implemented the fn 
+{
+  for (int i = 0; i < s.length(); i++)
+  {
+    if (s.at(i) == '0')
+    {
+      s.at(i) = '1';
+    }
+    else
+    {
+      s.at(i) = '0';
+    }
+  }
+}
+
+void binary ::display(void) //implemented the fn
+{
+  cout << "\nDisplaying the complement of binary number" << endl;
+  for (int i = 0; i < s.length(); i++)
+  {
+    cout << s.at(i);
+  }
+}
+
+int main()
+{
+  binary b;
+  b.read();
+  b.chk_bin(); 
+  b.display();
+  b.ones_complement();
+  b.display();
+
+  return 0;
+}
+
+
+
+
+// memory allocation in objects
+#include <iostream>
+
+using namespace std;
+
+class shop
+{ //3 private variables itemId and item price are array of same sizxe 100
+  int itemId[100]; // constatnt declared 100 directly
+  int itemPrice[100];//items will be added to arrays
+  int counter; // will track how many items are added
+public: //fn are only initialized here not declared
+  void initCounter(void) { counter = 0; } // counter set to 0 initially
+  void setPrice(void); //will store/set the value taken from user into the array with index from counter and increase the value of counter for the next time when it is called again
+  void displayPrice(void);
+};
+
+void shop ::setPrice(void) //here fn are declared
+{
+  cout << "enter id of item no. " << counter + 1 << endl;
+  cin >> itemId[counter]; // counter is initially 0
+  cout << "enter Price of item" << endl;
+  cin >> itemPrice[counter];
+  counter++; // counter incremented so that it will not overwrite the next value
+}
+
+void shop ::displayPrice(void)
+{
+  for (int i = 0; i < counter; i++)
+  {
+    cout << "The price of item with Id  " << itemId[i] << " is " << itemPrice[i] << endl;
+  }
+}
+
+int main()
+{
+
+  // driver program
+  shop dukan;          // object created dukan
+  dukan.initCounter(); // it will set the counter to 0
+  dukan.setPrice();    // will set the price(value) of item(object created)
+  dukan.setPrice(); //can be called under a loop 
+  dukan.setPrice();
+  dukan.displayPrice(); 
+
+  return 0;
+}
+
+output :
+
+    enter id of item no.1 1001 enter Price of item 123 enter id of item no.2 123 enter Price of item 123 enter id of item no.3 1234 enter Price of item 123 The price of item with Id 1001 is 123 The price of item with Id 123 is 123 The price of item with Id 1234 is 123
+
+
+########################################
+############################################
+
+object and classess
+
+#include <iostream>
+
+using namespace std;
+
+class Employee
+{
+  int id;
+  int count;
+
+public:
+  void setData(void)
+  {
+    cout<<"Enter the is ";
+    cin>>id;
+  }
+  void getData(void)
+  {
+    cout<<"The id of employee is "<<id;
+  }
+};
+
+int main()
+{
+  Employee shubh ; //shubh object is created of employee class
+  // shubh.id = 1;
+  // shubh.count = 1; //cannot do this as id and count are private
+
+  shubh.setData(); // setData fn is called 
+  shubh.getData(); //getData fn is called
+
+  
+      return 0;
+}
+
+
+################################
+
+static varaible
+
+#include <iostream>
+
+using namespace std;
+
+class Employee
+{
+  int id;
+  static int count; //by default is initialized to 0
+  // int count; //count will not be preserved because each object will have its count
+  //thats why we make static variable which is written outside class
+
+public:
+  void setData(void)
+  {
+    cout<<"Enter the is ";
+    cin>>id;
+    count++;
+  }
+  void getData(void)
+  {
+    cout<<"The id of employee is "<<id <<"and this is employee number "<<count<<endl;
+  }
+};
+int Employee :: count; //need to be declared outside class
+
+int main()
+{
+  Employee shubh ,amit ,ashutosh; 
+
+  shubh.setData(); 
+  shubh.getData();
+
+  amit.setData(); 
+  amit.getData();
+
+  ashutosh.setData(); 
+  ashutosh.getData();
+
+      return 0;
+}
+
+
+
+
+#include <iostream>
+//static data member
+using namespace std;
+
+class Employee
+{
+  int id;
+  static int count; //value cannot be initialized here
+  //count is staticmember fn of class Employee
+
+public:
+  void setData(void)
+  {
+    cout<<"Enter the is ";
+    cin>>id;
+    count++;
+  }
+  void getData(void)
+  {
+    cout<<"The id of employee is "<<id <<"and this is employee number "<<count<<endl;
+  }
+};
+int Employee :: count=100; //initial value can be initialized here like 100 //by defalut value is 0
+
+int main()
+{
+  Employee shubh ,amit ,ashutosh; 
+
+  shubh.setData(); 
+  shubh.getData();
+
+  amit.setData(); 
+  amit.getData();
+
+  ashutosh.setData(); 
+  ashutosh.getData();
+
+      return 0;
+}
+
+
+
+#include <iostream>
+// static data member
+using namespace std;
+
+class Employee
+{
+  int id;
+  static int count;
+
+public:
+  void setData(void)
+  {
+    cout << "Enter the is ";
+    cin >> id;
+    count++;
+  }
+  void getData(void)
+  {
+    cout << "The id of employee is " << id << "and this is employee number " << count << endl;
+  }
+  static void getCount(void)
+  {
+    cout << "The value of count is " << count << endl;
+
+    // cout<<id; //throws an error because a static member fn cannot access other variables otherthan static member fn
+  }
+};
+int Employee ::count;
+
+int main()
+{
+  Employee shubh, amit, ashutosh;
+
+  shubh.setData();
+  shubh.getData();
+  Employee::getCount(); //can be used manually here by defining class scope reolution"::"" and static fn name
+  
+  amit.setData();
+  amit.getData();
+  Employee::getCount(); //run without reference of any object
+
+  ashutosh.setData();
+  ashutosh.getData();
+  Employee::getCount();
+
+  return 0;
+}
+
+
+//making arrays of object
+#include<iostream>
+
+using namespace std;
+
+class Employee
+{
+  int id;
+  int salary;
+  public:
+  void setId(void)
+  {
+    salary  = 1234;
+    cout<<"Enter is of employee "<<endl;
+    cin>>id;
+  }
+  void getId(void)
+  {
+    cout<<"The id of employee is \n"<<id<<endl;
+  }
+};
+int main()
+{
+  // Employee Shubh ,Amit ,Ashutosh;
+  // Shubh.setId();
+  // Shubh.getId();
+
+  Employee fb[4];  //fb is an array of class Employee with 4 objects
+  for (int i = 0; i < 4; i++)
+  {
+    fb[i].setId();
+    fb[i].getId();
+  }
+  
+  
+  return 0;
+}
+
+
+
+#include <iostream>
+
+using namespace std;
+
+class complex
+{
+  int a;
+  int b;
+
+public:
+  void setData(int v1, int v2)
+  {
+    a = v1;
+    b = v2;
+  }
+
+  void setDataBySum(complex o1, complex o2)
+  {
+    a = o1.a + o2.a;
+    b = o1.b + o2.b;
+  }
+
+  void printnumber()
+  {
+    cout<<"Your complex number is "<<a<<" + "<<b<<"i"<<endl;
+  }
+};
+
+int main()
+{
+  complex c1, c2, c3;
+  c1.setData(1, 2);
+  c1.printnumber();
+
+  c2.setData(3, 4);
+  c2.printnumber();
+
+  c3.setDataBySum(c1 , c2);
+  c3.printnumber();
+
+  return 0;
+}
+
+
+
+
+
+
+
+########
+###########
+###########
+friend fn
+
+
+// friend fn
+#include <iostream>
+
+using namespace std;
+
+class Complex
+{
+  int a, b;
+
+public:
+  void set_number(int n1, int n2)
+  {
+    a = n1;
+    b = n2;
+  }
+
+  friend Complex sumComplex(Complex o1, Complex o2);
+
+  void print_number()
+  {
+    cout << "Number is " << a << " + " << b << "i" << endl;
+  }
+};
+Complex sumComplex(Complex o1, Complex o2)
+{
+  Complex o3;
+  o3.set_number((o1.a + o2.a), (o1.b + o2.b));
+
+  return o3;
+}
+
+int main()
+{
+  Complex c1, c2, sum;
+  c1.set_number(1, 4);
+  c2.set_number(5, 8);
+
+  c1.print_number();
+  c2.print_number();
+
+  sum = sumComplex(c1, c2);
+  sum.print_number();
+
+  return 0;
+}
+
+
+
+
+#############
+friend function
+
+#include <iostream> //friend class
+
+using namespace std;
+
+// using forward delcaration
+
+class Complex;
+
+class Calculator
+{
+public:
+  int add(int a, int b)
+  {
+    return (a + b);
+  }
+  // function declared here
+  int sumRealComplex(Complex, Complex);
+};
+class Complex
+{
+  int a, b;
+
+  friend int Calculator ::sumRealComplex(Complex o1, Complex o2);
+
+public:
+  void setNumber(int n1, int n2)
+  {
+    a = n1;
+    b = n2;
+  }
+  void printNumber()
+  {
+    cout << "number is " << a << " + " << b << " i" << endl;
+  }
+};
+// function defined here
+int Calculator ::sumRealComplex(Complex o1, Complex o2)
+{
+  return (o1.a + o2.a);
+}
+
+int main()
+{
+  Complex o1, o2;
+  o1.setNumber(1, 3);
+  o2.setNumber(3, 5);
+
+  Calculator calc;
+  int res = calc.sumRealComplex(o1, o2);
+  cout << "The sum of real part of o1 and o2 is " << res << endl;
+
+  return 0;
+}
+
+###########
+   
+#include <iostream> //friend class
+
+using namespace std;
+
+// using forward delcaration
+
+class Complex;
+
+class Calculator
+{
+public:
+  int add(int a, int b)
+  {
+    return (a + b);
+  }
+  // function declared here
+  int sumRealComplex(Complex, Complex);
+  int sumCompComplex(Complex, Complex);
+};
+class Complex
+{
+  int a, b;
+
+  friend int Calculator ::sumRealComplex(Complex o1, Complex o2);
+  friend int Calculator ::sumCompComplex(Complex o1,Complex o2);
+
+public:
+  void setNumber(int n1, int n2)
+  {
+    a = n1;
+    b = n2;
+  }
+  void printNumber()
+  {
+    cout << "number is " << a << " + " << b << " i" << endl;
+  }
+};
+// function defined here
+int Calculator ::sumRealComplex(Complex o1, Complex o2)
+{
+  return (o1.a + o2.a);
+}
+int Calculator ::sumCompComplex(Complex o1, Complex o2)
+{
+  return (o1.b+ o2.b);
+}
+
+
+int main()
+{
+  Complex o1, o2;
+  o1.setNumber(1, 3);
+  o2.setNumber(3, 5);
+
+  Calculator calc;
+  int res = calc.sumRealComplex(o1, o2);
+  cout << "The sum of real part of o1 and o2 is " << res << endl;
+
+  int resc = calc.sumCompComplex(o1, o2);
+  cout << "The sum of complex part of o1 and o2 is " << resc << endl;
+
+  return 0;
+}
+
+^^^^ individually declarijng function as friend
+
+//aliter : delcaring entire class as friend 
+>>>>>>
+
+#include <iostream> //friend class
+
+using namespace std;
+
+// using forward delcaration
+
+class Complex;
+
+class Calculator
+{
+public:
+  int add(int a, int b)
+  {
+    return (a + b);
+  }
+  // function declared here
+  int sumRealComplex(Complex, Complex);
+  int sumCompComplex(Complex, Complex);
+};
+class Complex
+{
+  int a, b;
+  friend class Calculator;
+
+public:
+  void setNumber(int n1, int n2)
+  {
+    a = n1;
+    b = n2;
+  }
+  void printNumber()
+  {
+    cout << "number is " << a << " + " << b << " i" << endl;
+  }
+};
+// function defined here
+int Calculator ::sumRealComplex(Complex o1, Complex o2)
+{
+  return (o1.a + o2.a);
+}
+int Calculator ::sumCompComplex(Complex o1, Complex o2)
+{
+  return (o1.b+ o2.b);
+}
+
+
+int main()
+{
+  Complex o1, o2;
+  o1.setNumber(1, 3);
+  o2.setNumber(3, 5);
+
+  Calculator calc;
+  int res = calc.sumRealComplex(o1, o2);
+  cout << "The sum of real part of o1 and o2 is " << res << endl;
+
+  int resc = calc.sumCompComplex(o1, o2);
+  cout << "The sum of complex part of o1 and o2 is " << resc << endl;
+
+  return 0;
+}
+
+
+
+
+############
+
+#include<iostream>
+
+using namespace std;
+class Y;
+class X
+{
+ int data;
+ public:
+ void setValue(int value)
+ {
+   data = value;
+ }
+
+ friend void add(X,Y);
+
+};
+
+class Y
+{
+  int num;
+  public:
+  void setValue(int value)
+  {
+    num = value;
+  }
+  friend void add(X, Y);
+};
+void add(X o1, Y o2)
+{
+  cout<<"Summing datas of X and Y objects gives me "<<o1.data + o2.num;
+}
+
+int main()
+{
+  X a1;
+  a1.setValue(7);
+
+  Y b1;
+  b1.setValue(6);
+
+  add(a1,b1);
+  
+  return 0;
+}
+
+
+
+###########
+#include<iostream>
+
+using namespace std;
+class c2;
+class c1
+{
+  int val1;
+  friend void exchange(c1 &,c2 &);
+
+
+  public:
+  void intdata(int a)
+  {
+    val1 = a;
+  }
+
+  void display(void)
+  {
+    cout<<val1<<endl;
+  }
+};
+class c2
+{
+  int val2;
+    friend void exchange(c1 &,c2 &);
+  public:
+  void intdata(int a)
+  {
+    val2= a;
+  }
+
+  void display(void)
+  {
+    cout<<val2<<endl;
+  }
+};
+
+void exchange(c1 & x,c2 &y)
+{
+  int temp = x.val1;
+  x.val1 = y.val2;
+  y.val2 = temp;
+}
+
+
+int main()
+{
+   c1 oc1;
+   c2 oc2;
+
+   oc1.intdata(23);
+   oc2.intdata(78);
+
+   exchange(oc1,oc2);
+
+   cout<<"VAlue after swap : ";
+   oc1.display();
+   cout<<"VAlue after swap : ";
+   oc2.display();
+
+  return 0;
+}
+
+
+#########################################
+########################################
+###########################################
+
+constructor and destructors:----
+
+1.Should be declared in public section of the class.
+2.They are automatically invoked when a object is creted.
+3.They cannot return values and dont have return types.
+4.
+
+
+
+#include<iostream>
+
+using namespace std;
+
+class Complex
+{
+  int a, b;
+  public:
+//creating constructor 
+//>>>special member fn as class used to initialize the objects of its class.when ever an object is creted automaically invoked (called)
+  Complex(void); //constructor declaration
+
+  void printNumber()
+  {
+    cout<<"Your number is "<<a<<" + "<<b<<"i"<<endl;
+    }
+
+};
+Complex ::Complex(void) //constructor initialized /defined >>>default constructors as it takes no parameter
+{
+  a = 40;
+  b = 0;
+}
+
+
+int main()
+{
+  Complex  c1 ,c2,c3 ;//object created 
+  c1.printNumber();
+  c2.printNumber();
+  c3.printNumber();
+
+  return 0;
+}
+
+
+
+
+
